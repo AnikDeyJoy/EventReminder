@@ -15,9 +15,7 @@ import com.anik.alarmreminder.AddReminderActivity;
 import com.anik.alarmreminder.R;
 import com.anik.alarmreminder.data.AlarmReminderContract;
 
-/**
- * Created by delaroy on 9/22/17.
- */
+
 
 public class ReminderAlarmService extends IntentService {
     private static final String TAG = ReminderAlarmService.class.getSimpleName();
