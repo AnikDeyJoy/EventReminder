@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.provider.Settings;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 
@@ -68,6 +69,9 @@ public class ReminderAlarmService extends IntentService {
                 .setContentText(description)
                 .setSmallIcon(R.drawable.ic_add_alert_black_24dp)
                 .setContentIntent(operation)
+                .setVibrate(new long[]{ 1000, 1000, 1000, 1000, 1000})
+                .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
+                .setAutoCancel(true)
                 .setAutoCancel(true)
                 .build();
 
